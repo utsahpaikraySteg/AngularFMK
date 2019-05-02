@@ -8,7 +8,7 @@ import { ConfirmsnackbarComponent } from '../confirmsnackbar/confirmsnackbar.com
 import { HttpClient } from '@angular/common/http';
 import { DataService } from '../data.service';
 
-const URL = 'http://localhost:3000/posts';
+const URL = 'https://utsahpaikraysteg.github.io/AngularFMK/posts';
 @Component({
   selector: 'app-raectiveform',
   templateUrl: './raectiveform.component.html',
@@ -60,7 +60,7 @@ export class RaectiveformComponent implements OnInit {
     if (this.registerForm.valid) {
       var mail= "mailto:career@mfksoftware.com?subject="+ this.registerForm.value.address + "&body="+ " Name: "+this.registerForm.value.firstName +"Instutute Name: "+this.registerForm.value.instituteName + " studentStength: "+this.registerForm.value.studentStength + " ContactNumber : "+this.registerForm.value.ContactNumber;
       window.open( mail,'_blank', 'height=400,width=400,resizable=yes,scrollbars=yes,status=no,titlebar=no');
-      this.data.sendMail("http://localhost:3000/sendmail", user).subscribe(
+      this.data.sendMail("https://utsahpaikraysteg.github.io/AngularFMK/sendmail", user).subscribe(
         data => {
           this.snackBar.openFromComponent(ConfirmsnackbarComponent, {
             duration: 1000,

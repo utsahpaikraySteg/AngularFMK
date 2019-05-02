@@ -77,7 +77,7 @@ public caseDetails = {
     return this.http.post(url,data,{responseType: 'text'});
   }
   uploadFile(data: any): Observable<{}> {
-    this._url = 'http://localhost:3000/uploadFile';
+    this._url = 'https://utsahpaikraysteg.github.io/AngularFMK/uploadFile';
     return this.http.post(this._url, data,{responseType: 'text'});
        // .map(this.handleData);
 }

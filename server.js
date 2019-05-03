@@ -66,8 +66,9 @@ app.post('/uploadFile', (req, res)=>{
 res.send('Hello World!');
 
 });
+var server = require('http').createServer();
 const PORT = process.env.PORT || 'https://utsahpaikraysteg.github.io/AngularFMK';
  
-app.listen(PORT, function () {
+server.listen(PORT, function () {
   console.log(`Node.js server is running on port ${PORT}`);
 });

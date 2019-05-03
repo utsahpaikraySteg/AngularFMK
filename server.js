@@ -66,8 +66,8 @@ app.post('/uploadFile', (req, res)=>{
 res.send('Hello World!');
 
 });
-var server = require('http').createServer();
-const PORT = process.env.PORT || 3000;
+var server = require('http').createServer(app);
+const PORT = process.env.PORT || "8080";
  
 server.listen(PORT, function () {
   console.log(`Node.js server is running on port ${PORT}`);

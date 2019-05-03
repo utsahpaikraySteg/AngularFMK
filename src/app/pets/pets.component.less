@@ -15,13 +15,13 @@
 ul {
   margin: 20px 0;
   list-style: none;
-  color:  #007bff;
+  color: #007bff;
   font-size: 20px;
   padding: 0;
 
   li {
-   // background: #00a8ff;
-   // background-image: linear-gradient(to right, rgb(0, 123, 254), #b125ad);
+    // background: #00a8ff;
+    // background-image: linear-gradient(to right, rgb(0, 123, 254), #b125ad);
     border-radius: 2px;
     padding: 7px 10px;
     margin-bottom: 8px;
@@ -29,7 +29,7 @@ ul {
     transform-origin: center center;
 
     &:hover {
-   //   background-color: #f14ad4;
+      //   background-color: #f14ad4;
       cursor: pointer;
       transform: scale(1.01);
       font-weight: 400;
@@ -45,11 +45,12 @@ ul {
     width: 30vw;
     padding: 6px 17px;
     margin: 5px;
-    background:#000;
+    background: #000;
     color: #fff;
     font-size: 20px;
   }
 }
+
 .example-headers-align .mat-expansion-panel-header-title,
 .example-headers-align .mat-expansion-panel-header-description {
   flex-basis: 0;
@@ -64,16 +65,35 @@ mat-form-field {
   margin-right: 12px;
 }
 
-  .open-positions{
-    h5{
-      margin: 0;
-    }
-    p{
-      font-size: 20px;
-      line-height: 30px;
-      text-align: justify;
+.open-positions {
+  h5 {
+    margin: 0;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+  }
+}
+
+.carrier-mailto {
+  margin-top: 10px;
+}
+
+.mat-expanded {
+  mat-panel-title {
+    &.mat-expansion-panel-header-title {
+      border-bottom: 1px solid #3591ef;
+      padding: 0 0 10px 0;
     }
   }
-  .carrier-mailto{
-    margin-top: 10px;
-  }
+}
+mat-expansion-panel-header{
+  mat-panel-title {
+    color: rgba(35, 127, 210, 0.87);
+  }  
+}
+.mat-accordion .mat-expansion-panel{
+  margin: 10px 0;
+}

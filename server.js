@@ -3,7 +3,6 @@ const fs = require('fs');
 const express = require('express');
 const multer = require('multer');
 const bodyParser = require('body-parser')
-const nodemailer = require('nodemailer');
 const app = express();
 const router = express.Router();
 const cors = require('cors');
@@ -67,7 +66,7 @@ res.send('Hello World!');
 
 });
 var server = require('http').createServer(app);
-const PORT = process.env.PORT || "8080";
+const PORT = process.env.PORT || "https://mfksoftware.herokuapp.com";
  
 server.listen(PORT, function () {
   console.log(`Node.js server is running on port ${PORT}`);

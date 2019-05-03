@@ -258,30 +258,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm5/list.es5.js");
 /* harmony import */ var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/esm5/tooltip.es5.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm5/sidenav.es5.js");
-/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/esm5/progress-bar.es5.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
-/* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/esm5/slider.es5.js");
-/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm5/radio.es5.js");
-/* harmony import */ var _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/slide-toggle */ "./node_modules/@angular/material/esm5/slide-toggle.es5.js");
-/* harmony import */ var _angular_material_stepper__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/stepper */ "./node_modules/@angular/material/esm5/stepper.es5.js");
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/esm5/form-field.es5.js");
-/* harmony import */ var _pets_pets_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pets/pets.component */ "./src/app/pets/pets.component.ts");
-/* harmony import */ var _anime_anime_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./anime/anime.component */ "./src/app/anime/anime.component.ts");
-/* harmony import */ var _exponential_strength_pipe__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./exponential-strength.pipe */ "./src/app/exponential-strength.pipe.ts");
-/* harmony import */ var _raectiveform_raectiveform_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./raectiveform/raectiveform.component */ "./src/app/raectiveform/raectiveform.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
-/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/esm5/expansion.es5.js");
-/* harmony import */ var _contact_contact_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./contact/contact.component */ "./src/app/contact/contact.component.ts");
-/* harmony import */ var _confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./confirmsnackbar/confirmsnackbar.component */ "./src/app/confirmsnackbar/confirmsnackbar.component.ts");
+/* harmony import */ var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/datepicker */ "./node_modules/@angular/material/esm5/datepicker.es5.js");
+/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm5/sidenav.es5.js");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/esm5/progress-bar.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+/* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/esm5/slider.es5.js");
+/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm5/radio.es5.js");
+/* harmony import */ var _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/slide-toggle */ "./node_modules/@angular/material/esm5/slide-toggle.es5.js");
+/* harmony import */ var _angular_material_stepper__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/stepper */ "./node_modules/@angular/material/esm5/stepper.es5.js");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/esm5/form-field.es5.js");
+/* harmony import */ var _pets_pets_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pets/pets.component */ "./src/app/pets/pets.component.ts");
+/* harmony import */ var _anime_anime_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./anime/anime.component */ "./src/app/anime/anime.component.ts");
+/* harmony import */ var _exponential_strength_pipe__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./exponential-strength.pipe */ "./src/app/exponential-strength.pipe.ts");
+/* harmony import */ var _raectiveform_raectiveform_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./raectiveform/raectiveform.component */ "./src/app/raectiveform/raectiveform.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
+/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/esm5/expansion.es5.js");
+/* harmony import */ var _contact_contact_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./contact/contact.component */ "./src/app/contact/contact.component.ts");
+/* harmony import */ var _confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./confirmsnackbar/confirmsnackbar.component */ "./src/app/confirmsnackbar/confirmsnackbar.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -330,15 +333,15 @@ var AppModule = /** @class */ (function () {
                 _users_users_component__WEBPACK_IMPORTED_MODULE_8__["UsersComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
                 _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"],
-                _pets_pets_component__WEBPACK_IMPORTED_MODULE_24__["PetsComponent"],
-                _anime_anime_component__WEBPACK_IMPORTED_MODULE_25__["AnimeComponent"],
-                _exponential_strength_pipe__WEBPACK_IMPORTED_MODULE_26__["ExponentialStrengthPipe"],
-                _raectiveform_raectiveform_component__WEBPACK_IMPORTED_MODULE_27__["RaectiveformComponent"],
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_28__["FooterComponent"],
-                _contact_contact_component__WEBPACK_IMPORTED_MODULE_31__["ContactComponent"],
-                _confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_32__["ConfirmsnackbarComponent"]
+                _pets_pets_component__WEBPACK_IMPORTED_MODULE_25__["PetsComponent"],
+                _anime_anime_component__WEBPACK_IMPORTED_MODULE_26__["AnimeComponent"],
+                _exponential_strength_pipe__WEBPACK_IMPORTED_MODULE_27__["ExponentialStrengthPipe"],
+                _raectiveform_raectiveform_component__WEBPACK_IMPORTED_MODULE_28__["RaectiveformComponent"],
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_29__["FooterComponent"],
+                _contact_contact_component__WEBPACK_IMPORTED_MODULE_32__["ContactComponent"],
+                _confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_33__["ConfirmsnackbarComponent"]
             ],
-            entryComponents: [_confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_32__["ConfirmsnackbarComponent"]],
+            entryComponents: [_confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_33__["ConfirmsnackbarComponent"]],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
@@ -354,22 +357,24 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatMenuModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatButtonModule"],
-                _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_16__["MatProgressBarModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_17__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_17__["ReactiveFormsModule"],
-                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_18__["LayoutModule"],
+                _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_15__["MatDatepickerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatNativeDateModule"],
+                _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_17__["MatProgressBarModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_18__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_18__["ReactiveFormsModule"],
+                _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_19__["LayoutModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatButtonModule"],
-                _angular_material_slider__WEBPACK_IMPORTED_MODULE_19__["MatSliderModule"],
-                _angular_material_radio__WEBPACK_IMPORTED_MODULE_20__["MatRadioModule"],
-                _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_21__["MatSlideToggleModule"],
-                _angular_material_stepper__WEBPACK_IMPORTED_MODULE_22__["MatStepperModule"],
-                _angular_material_form_field__WEBPACK_IMPORTED_MODULE_23__["MatFormFieldModule"],
+                _angular_material_slider__WEBPACK_IMPORTED_MODULE_20__["MatSliderModule"],
+                _angular_material_radio__WEBPACK_IMPORTED_MODULE_21__["MatRadioModule"],
+                _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_22__["MatSlideToggleModule"],
+                _angular_material_stepper__WEBPACK_IMPORTED_MODULE_23__["MatStepperModule"],
+                _angular_material_form_field__WEBPACK_IMPORTED_MODULE_24__["MatFormFieldModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
-                _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_15__["MatSidenavModule"],
-                _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_29__["MatSnackBarModule"],
-                _angular_material_expansion__WEBPACK_IMPORTED_MODULE_30__["MatExpansionModule"],
+                _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_16__["MatSidenavModule"],
+                _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_30__["MatSnackBarModule"],
+                _angular_material_expansion__WEBPACK_IMPORTED_MODULE_31__["MatExpansionModule"],
             ],
-            providers: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"]],
+            providers: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbActiveModal"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_15__["MatDatepickerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatNativeDateModule"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -1142,7 +1147,7 @@ var PostsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- main app container -->\r\n<div class=\"\">\r\n  <div class=\"container\">  \r\n        <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Full Name</mat-label>\r\n                  <input matInput type=\"text\" formControlName=\"firstName\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.firstName.errors }\" placeholder=\"First Name\">\r\n                  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\r\n                  <div *ngIf=\"submitted && f.firstName.errors\" class=\"invalid-feedback\">\r\n                      <div *ngIf=\"f.firstName.errors.required\">First Name is required</div>\r\n                    </div>\r\n              </mat-form-field>\r\n              \r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Email</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"email\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors }\" placeholder=\"Email\">\r\n                  <mat-icon matSuffix>email</mat-icon>\r\n                  <div *ngIf=\"submitted && f.email.errors\" class=\"invalid-feedback\">\r\n                      <div *ngIf=\"f.email.errors.required\">Email is required</div>\r\n                  </div>\r\n              </mat-form-field>\r\n            </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Institute Name</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"instituteName\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.instituteName.errors }\" placeholder=\"Institute Name\">\r\n                  <mat-icon matSuffix>business</mat-icon>\r\n                  <div *ngIf=\"submitted && f.instituteName.errors\" class=\"invalid-feedback\">\r\n                      <div *ngIf=\"f.instituteName.errors.required\">Institute Name is required</div>\r\n                    </div>\r\n              </mat-form-field>\r\n            </div>\r\n          <div class=\"form-group\">\r\n            <mat-form-field appearance=\"outline\">\r\n                <mat-label>Student Strength</mat-label>\r\n                <input matInput  type=\"text\" formControlName=\"studentStength\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.studentStength.errors }\" placeholder=\"Student Strength\">\r\n                <mat-icon matSuffix>group</mat-icon>\r\n            </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Address</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"address\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.address.errors }\" placeholder=\"Address\">\r\n                  <mat-icon matSuffix>perm_contact_calendar</mat-icon>\r\n              </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Contact Number</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"ContactNumber\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.ContactNumber.errors }\" placeholder=\"Contact Number\">\r\n                  <mat-icon matSuffix>contacts</mat-icon>\r\n              </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Preffered Contact Time</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"PreffredContactTime\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.PreffredContactTime.errors }\" placeholder=\"Preffered Contact Time\">\r\n                  <mat-icon matSuffix>schedule</mat-icon>\r\n              </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Query</mat-label>\r\n                  <textarea matInput formControlName=\"query\" class=\"form-control\" placeholder=\"Query\"></textarea>\r\n                  <mat-icon matSuffix>question_answer</mat-icon>\r\n              </mat-form-field>\r\n          </div>    \r\n          <!-- <div class=\"form-group\">\r\n            <input type=\"file\" formControlName=\"uploadfile\" class=\"form-control\"  id=\"uploadfile\" name=\"file\" (change)=\"upload($event)\"/>\r\n          </div> -->\r\n          <div class=\"form-group button-group\">\r\n            <button  class=\"btn btn-primary\">submit</button>\r\n          </div>\r\n          \r\n        </form>\r\n        \r\n  </div>\r\n</div>"
+module.exports = "<!-- main app container -->\r\n<div class=\"\">\r\n  <div class=\"container\">  \r\n        <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Full Name</mat-label>\r\n                  <input matInput type=\"text\" formControlName=\"firstName\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.firstName.errors }\" placeholder=\"First Name\">\r\n                  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\r\n                  <!-- <div *ngIf=\"submitted && f.firstName.errors\" class=\"invalid-feedback\">\r\n                      <div *ngIf=\"f.firstName.errors.required\">First Name is required</div>\r\n                    </div> -->\r\n              </mat-form-field>\r\n              \r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Email</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"email\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors }\" placeholder=\"Email\">\r\n                  <mat-icon matSuffix>email</mat-icon>\r\n                  <!-- <div *ngIf=\"submitted && f.email.errors\" class=\"invalid-feedback\">\r\n                      <div *ngIf=\"f.email.errors.required\">Email is required</div>\r\n                  </div> -->\r\n              </mat-form-field>\r\n            </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Institute Name</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"instituteName\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.instituteName.errors }\" placeholder=\"Institute Name\">\r\n                  <mat-icon matSuffix>business</mat-icon>\r\n                  <!-- <div *ngIf=\"submitted && f.instituteName.errors\" class=\"invalid-feedback\">\r\n                      <div *ngIf=\"f.instituteName.errors.required\">Institute Name is required</div>\r\n                    </div> -->\r\n              </mat-form-field>\r\n            </div>\r\n          <div class=\"form-group\">\r\n            <mat-form-field appearance=\"outline\">\r\n                <mat-label>Student Strength</mat-label>\r\n                <input matInput  type=\"text\" formControlName=\"studentStength\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.studentStength.errors }\" placeholder=\"Student Strength\">\r\n                <mat-icon matSuffix>group</mat-icon>\r\n            </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Address</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"address\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.address.errors }\" placeholder=\"Address\">\r\n                  <mat-icon matSuffix>perm_contact_calendar</mat-icon>\r\n              </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Contact Number</mat-label>\r\n                  <input matInput  type=\"text\" formControlName=\"ContactNumber\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.ContactNumber.errors }\" placeholder=\"Contact Number\">\r\n                  <mat-icon matSuffix>contacts</mat-icon>\r\n              </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <!-- <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Preffered Contact Time</mat-label>\r\n                  <input matInput  type=\"date\" formControlName=\"PreffredContactTime\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.PreffredContactTime.errors }\" placeholder=\"Preffered Contact Time\">\r\n                  <mat-icon matSuffix>schedule</mat-icon>\r\n              </mat-form-field> -->\r\n              <mat-form-field appearance=\"outline\" class=\"example-full-width\">\r\n                  <mat-label>Preffered Contact Time</mat-label>\r\n                <input matInput [matDatepicker]=\"picker\" formControlName=\"PreffredContactTime\" class=\"form-control\" [ngClass]=\"{ 'is-invalid': submitted && f.PreffredContactTime.errors }\" placeholder=\"Preffered Contact Time\">\r\n                <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n                <mat-datepicker touchUi #picker></mat-datepicker>\r\n              </mat-form-field>\r\n          </div>\r\n          <div class=\"form-group\">\r\n              <mat-form-field appearance=\"outline\">\r\n                  <mat-label>Query</mat-label>\r\n                  <textarea matInput formControlName=\"query\" class=\"form-control\" placeholder=\"Query\"></textarea>\r\n                  <mat-icon matSuffix>question_answer</mat-icon>\r\n              </mat-form-field>\r\n          </div>    \r\n          <!-- <div class=\"form-group\">\r\n            <input type=\"file\" formControlName=\"uploadfile\" class=\"form-control\"  id=\"uploadfile\" name=\"file\" (change)=\"upload($event)\"/>\r\n          </div> -->\r\n          <div class=\"form-group button-group\">\r\n            <button  class=\"btn btn-primary\">submit</button>\r\n          </div>\r\n          \r\n        </form>\r\n        \r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1238,12 +1243,14 @@ var RaectiveformComponent = /** @class */ (function () {
         };
         this.submitted = true;
         if (this.registerForm.valid) {
-            var mail = "mailto:career@mfksoftware.com?subject=" + this.registerForm.value.address + "&body=" + " Name: " + this.registerForm.value.firstName + "Instutute Name: " + this.registerForm.value.instituteName + " studentStength: " + this.registerForm.value.studentStength + " ContactNumber : " + this.registerForm.value.ContactNumber;
-            window.open(mail, '_blank', 'height=400,width=400,resizable=yes,scrollbars=yes,status=no,titlebar=no');
             this.data.sendMail("https://utsahpaikraysteg.github.io/AngularFMK/sendmail", user).subscribe(function (data) {
                 _this.snackBar.openFromComponent(_confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmsnackbarComponent"], {
                     duration: 1000,
                 });
+                _this.registerForm.reset();
+                for (var name_1 in _this.registerForm.controls) {
+                    _this.registerForm.controls[name_1].setErrors(null);
+                }
             }, function (err) {
                 console.log(err);
             });

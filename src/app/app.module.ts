@@ -15,6 +15,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatListModule} from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -69,6 +71,8 @@ import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.comp
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatProgressBarModule,
     FormsModule,
     ReactiveFormsModule,
@@ -85,7 +89,7 @@ import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.comp
     MatExpansionModule,
     // REACTIVE_FORM_DIRECTIVES
   ],
-  providers: [ NgbActiveModal],
+  providers: [ NgbActiveModal,  MatDatepickerModule, MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

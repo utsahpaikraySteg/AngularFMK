@@ -7,15 +7,16 @@ const nodemailer = require('nodemailer');
 const app = express();
 const router = express.Router();
 const cors = require('cors');
+const sgMail = require('@sendgrid/mail');
 const ABSPATH = path.dirname(process.mainModule.filename);
 app.use(cors({origin:'*'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 const DIR = './uploads';
 const posts= require('./server/routes/posts');
- app.use(express.static(path.join(__dirname,'dist/my-dream-app2')));
+ app.use(express.static(path.join(__dirname,'dist')));
  app.get('*', function(req, res) {
-     res.sendFile(path.join(__dirname, 'dist/my-dream-app2/index.html'));
+     res.sendFile(path.join(__dirname, 'dist/index.html'));
  });
  app.use('/posts',posts);
 console.log(ABSPATH);
@@ -41,30 +42,23 @@ router.use((req, res, next) => {
   next();
 });
 app.post('/sendmail', (req,res)=>{
-  console.log(req);
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-           user: 'utsahpaikray@gmail.com',
-           pass: 'utsahpaikray@123'
-       }
-   });
-   const mailOptions = {
-    from: req.email, // sender address
-    to: 'utsahpaikray@gmail.com', // list of receivers
-    subject: 'Subject of your email ', // Subject line
-    attachments: [
-      {
-       path: ABSPATH + '/package.json'
-      }
-   ],
-    html: '<div style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#f3f2f0;"><b>Hello, <p>I am happy to apply</p><strong>{{req.name}}</strong>\n<b>In</b></p></div>'// plain text body
+  var SENDGRID_APY_KEY = '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';
+  sgMail.setApiKey(SENDGRID_APY_KEY);
+//  sgMail.setApiKey(process.env.m8CpB5hzRFimI5rKpv72Cg9);
+var from=req;
+console.log(from.body);
+  const msg = {
+    to: 'paikrayu@gmail.com',
+    from: from.body.email,
+    subject: from.body.instituteName,
+    text: 'Hi,' + from.body.name +'I am interested for the demo',
+    html: '<div style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#f3f2f0;"><b>Hello, <p>'+ from.body.name +' I am interested for the demo</p><p><strong> Institute Name:'+from.body.instituteName +'</strong></p>\n<p><b>PreffredContactTime:'+ from.body.PreffredContactTime+' </b></p>\n<p><b>Query:'+ from.body.query+' </b></p></div>',
   };
-  transporter.sendMail(mailOptions, function (err, info) {
+  sgMail.send(msg, function(err, info){
     if(err)
-      console.log(err)
-    else
-      res.send('Hello World!');
+        console.log(err)
+      else
+        res.send('success');
   });
   
 });
@@ -72,7 +66,7 @@ app.post('/uploadFile', (req, res)=>{
 res.send('Hello World!');
 
 });
-const PORT = process.env.PORT || "https://utsahpaikraysteg.github.io/AngularFMK";
+const PORT = process.env.PORT || 'https://utsahpaikraysteg.github.io/AngularFMK';
  
 app.listen(PORT, function () {
   console.log(`Node.js server is running on port ${PORT}`);

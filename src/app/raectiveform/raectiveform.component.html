@@ -7,9 +7,9 @@
                   <mat-label>Full Name</mat-label>
                   <input matInput type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" placeholder="First Name">
                   <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                  <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                  <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
                       <div *ngIf="f.firstName.errors.required">First Name is required</div>
-                    </div>
+                    </div> -->
               </mat-form-field>
               
           </div>
@@ -18,9 +18,9 @@
                   <mat-label>Email</mat-label>
                   <input matInput  type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email">
                   <mat-icon matSuffix>email</mat-icon>
-                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                       <div *ngIf="f.email.errors.required">Email is required</div>
-                  </div>
+                  </div> -->
               </mat-form-field>
             </div>
           <div class="form-group">
@@ -28,9 +28,9 @@
                   <mat-label>Institute Name</mat-label>
                   <input matInput  type="text" formControlName="instituteName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.instituteName.errors }" placeholder="Institute Name">
                   <mat-icon matSuffix>business</mat-icon>
-                  <div *ngIf="submitted && f.instituteName.errors" class="invalid-feedback">
+                  <!-- <div *ngIf="submitted && f.instituteName.errors" class="invalid-feedback">
                       <div *ngIf="f.instituteName.errors.required">Institute Name is required</div>
-                    </div>
+                    </div> -->
               </mat-form-field>
             </div>
           <div class="form-group">
@@ -55,10 +55,16 @@
               </mat-form-field>
           </div>
           <div class="form-group">
-              <mat-form-field appearance="outline">
+              <!-- <mat-form-field appearance="outline">
                   <mat-label>Preffered Contact Time</mat-label>
-                  <input matInput  type="text" formControlName="PreffredContactTime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.PreffredContactTime.errors }" placeholder="Preffered Contact Time">
+                  <input matInput  type="date" formControlName="PreffredContactTime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.PreffredContactTime.errors }" placeholder="Preffered Contact Time">
                   <mat-icon matSuffix>schedule</mat-icon>
+              </mat-form-field> -->
+              <mat-form-field appearance="outline" class="example-full-width">
+                  <mat-label>Preffered Contact Time</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="PreffredContactTime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.PreffredContactTime.errors }" placeholder="Preffered Contact Time">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker></mat-datepicker>
               </mat-form-field>
           </div>
           <div class="form-group">

@@ -8,7 +8,7 @@ import { ConfirmsnackbarComponent } from '../confirmsnackbar/confirmsnackbar.com
 import { HttpClient } from '@angular/common/http';
 import { DataService } from '../data.service';
 
-const URL = 'http://localhost:3000/posts';
+const URL = 'http://localhost:8080/posts';
 @Component({
   selector: 'app-raectiveform',
   templateUrl: './raectiveform.component.html',
@@ -58,7 +58,7 @@ export class RaectiveformComponent implements OnInit {
 
 
     if (this.registerForm.valid) {
-      this.data.sendMail("http://localhost:3000/sendmail", user).subscribe(
+      this.data.sendMail("http://localhost:8080/sendmail", user).subscribe(
         data => {
           this.snackBar.openFromComponent(ConfirmsnackbarComponent, {
             duration: 1000,

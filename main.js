@@ -1195,7 +1195,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var URL = 'https://utsahpaikraysteg.github.io/AngularFMK/posts';
+var URL = 'http://localhost:3000/posts';
 var RaectiveformComponent = /** @class */ (function () {
     function RaectiveformComponent(formBuilder, config, modalService, modal, snackBar, http, data) {
         this.formBuilder = formBuilder;
@@ -1243,7 +1243,7 @@ var RaectiveformComponent = /** @class */ (function () {
         };
         this.submitted = true;
         if (this.registerForm.valid) {
-            this.data.sendMail("https://utsahpaikraysteg.github.io/AngularFMK/sendmail", user).subscribe(function (data) {
+            this.data.sendMail("http://localhost:3000/sendmail", user).subscribe(function (data) {
                 _this.snackBar.openFromComponent(_confirmsnackbar_confirmsnackbar_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmsnackbarComponent"], {
                     duration: 1000,
                 });

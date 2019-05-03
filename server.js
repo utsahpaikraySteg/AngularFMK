@@ -67,7 +67,7 @@ res.send('Hello World!');
 
 });
 var server = require('http').createServer();
-const PORT = process.env.PORT || 'https://utsahpaikraysteg.github.io/AngularFMK';
+const PORT = process.env.PORT || 3000;
  
 server.listen(PORT, function () {
   console.log(`Node.js server is running on port ${PORT}`);

@@ -15,3 +15,5 @@ npm install --save @sendgrid/mail
 echo "export SENDGRID_API_KEY='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'" > sendgrid.env
 echo "sendgrid.env" >> .gitignore
 source ./sendgrid.env
+
+git config core.autocrlf true

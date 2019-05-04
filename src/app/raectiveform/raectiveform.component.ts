@@ -8,7 +8,6 @@ import { ConfirmsnackbarComponent } from '../confirmsnackbar/confirmsnackbar.com
 import { HttpClient } from '@angular/common/http';
 import { DataService } from '../data.service';
 import {  FileUploader} from 'ng2-file-upload/ng2-file-upload';
-import { FileSelectDirective } from 'ng2-file-upload';
 
 //const URL = 'https://mfksoftware.herokuapp.com/posts';
 const uri = 'https://mfksoftware.herokuapp.com/uploads';

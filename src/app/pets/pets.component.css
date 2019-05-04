@@ -62,3 +62,13 @@ mat-form-field {
 .carrier-mailto {
   margin-top: 10px;
 }
+.mat-expanded mat-panel-title.mat-expansion-panel-header-title {
+  border-bottom: 1px solid #3591ef;
+  padding: 0 0 10px 0;
+}
+mat-expansion-panel-header mat-panel-title {
+  color: rgba(35, 127, 210, 0.87);
+}
+.mat-accordion .mat-expansion-panel {
+  margin: 10px 0;
+}

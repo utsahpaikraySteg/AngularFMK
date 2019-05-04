@@ -37,7 +37,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ContactComponent } from './contact/contact.component';
 import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.component';
-
+import { FileUploadModule } from 'ng2-file-upload';
 // import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
 @NgModule({
@@ -88,6 +88,7 @@ import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.comp
     MatSidenavModule,
     MatSnackBarModule,
     MatExpansionModule,
+    FileUploadModule 
     // REACTIVE_FORM_DIRECTIVES
   ],
   providers: [ NgbActiveModal,  MatDatepickerModule, MatNativeDateModule],

@@ -101,10 +101,11 @@ mat-card-content.mat-card-content {
 }
 mat-card-content.mat-card-content .product-description {
   font-size: 20px;
+  padding: 0;
 }
 mat-card-content.mat-card-content .product-description p {
   text-align: justify;
-  color: #00a8ff;
+  color: #0c89ca;
   margin: 10px 0;
 }
 mat-card-content.mat-card-content .product-card-img {
@@ -150,6 +151,12 @@ mat-card-content.mat-card-content img {
     text-align: center;
     margin: 10px auto;
     display: block;
+  }
+  .selectedproduct .mat-card .application-text {
+    font-size: 24px;
+  }
+  .selectedproduct .mat-card p {
+    font-size: 20px;
   }
 }
 .example-card .mat-card-header .header-title {

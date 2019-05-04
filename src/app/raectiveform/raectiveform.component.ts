@@ -7,8 +7,11 @@ import { MatSnackBar } from '@angular/material';
 import { ConfirmsnackbarComponent } from '../confirmsnackbar/confirmsnackbar.component';
 import { HttpClient } from '@angular/common/http';
 import { DataService } from '../data.service';
+import {  FileUploader, FileSelectDirective } from 'ng2-file-upload/ng2-file-upload';
+import {saveAs} from 'file-saver';
 
-const URL = 'https://mfksoftware.herokuapp.com/posts';
+//const URL = 'https://mfksoftware.herokuapp.com/posts';
+const uri = 'https://mfksoftware.herokuapp.com/uploads';
 @Component({
   selector: 'app-raectiveform',
   templateUrl: './raectiveform.component.html',
@@ -22,7 +25,13 @@ export class RaectiveformComponent implements OnInit {
   model: any = {};
   filepath: any;
   localUrl: any;
-  constructor(private formBuilder: FormBuilder, config: NgbModalConfig, private modalService: NgbModal, public modal: NgbActiveModal, private snackBar: MatSnackBar, private http: HttpClient, private data: DataService) {}
+  uploader:FileUploader = new FileUploader({url:uri});
+  attachmentList:any = [];
+  constructor(private formBuilder: FormBuilder, config: NgbModalConfig, private modalService: NgbModal, public modal: NgbActiveModal, private snackBar: MatSnackBar, private http: HttpClient, private data: DataService) {
+        this.uploader.onCompleteItem = (item:any, response:any , status:any, headers:any) => {
+          this.attachmentList.push(JSON.parse(response));
+      }
+  }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -38,6 +47,7 @@ export class RaectiveformComponent implements OnInit {
       // password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
+ 
   get f() {
     return this.registerForm.controls;
   }
@@ -52,7 +62,7 @@ export class RaectiveformComponent implements OnInit {
       address: this.registerForm.value.address,
       PreffredContactTime: this.registerForm.value.PreffredContactTime,
       query: this.registerForm.value.query,
-      uploadfile: this.filepath
+      uploadfile: this.attachmentList[0].uploadname
     }
     this.submitted = true;
 
@@ -77,39 +87,6 @@ export class RaectiveformComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
-  }
-  
-  upload(event: any) {
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
-      reader.onload = (event: any) => {
-          this.localUrl = event.target.result;
-      }
-      reader.readAsDataURL(event.target.files[0]);
-  }
-    let files = event.target.files;
-    let fData: FormData = new FormData;
-    this.filepath=files[0].name;
-    for (var i = 0; i < files.length; i++) {
-      fData.append("file[]", files[i]);
-    }
-    var _data = {
-      filename: 'Sample File',
-      id: '0001'
-    }
-
-    fData.append("data", JSON.stringify(_data));
-
-    this.data.uploadFile(fData).subscribe(
-      response => this.handleResponse(response),
-      error => this.handleError(error)
-    )
-  }
-  handleResponse(response: any) {
-    console.log(response);
-  }
-  handleError(error: string) {
-    console.log(error);
   }
 
 }

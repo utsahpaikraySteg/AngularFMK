@@ -37,6 +37,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ContactComponent } from './contact/contact.component';
 import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.component';
+import { FileSelectDirective } from 'ng2-file-upload';
 // import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
 @NgModule({
@@ -53,7 +54,8 @@ import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.comp
     RaectiveformComponent,
     FooterComponent,
     ContactComponent,
-    ConfirmsnackbarComponent
+    ConfirmsnackbarComponent,
+    FileSelectDirective
   ],
   entryComponents: [ConfirmsnackbarComponent],
   imports: [

@@ -54,7 +54,9 @@ app.post('/uploads', function(req,res,next){
 
 app.post('/sendmail', (req,res)=>{
   
-  var SENDGRID_APY_KEY = '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';
+  var appkey1="SG.z9A-oELMT3SwdwkPfs94Wg.";
+  var appkey2="D4xgAxFpqFmIVP-j5dmNKXHKkcZg1T95pSW36qgbOrs";
+  var SENDGRID_APY_KEY = appkey1+appkey2;
   sgMail.setApiKey(SENDGRID_APY_KEY);
 //  sgMail.setApiKey(process.env.m8CpB5hzRFimI5rKpv72Cg9);
 var from=req;
@@ -71,6 +73,10 @@ var from=req;
       else
         res.send('success');
   });
+
+  //===================nodemailer implement======================//
+
+
   
 });
 

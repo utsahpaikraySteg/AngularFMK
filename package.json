@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --output-path angularapp  --aot --prod"
+    "postinstall": "ng build --output-path angularapp --aot --prod"
   },
   "engines": {
     "node": "v10.15.3",
@@ -32,7 +32,6 @@
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "@sendgrid/mail": "^6.3.1",
     "@types/file-saver": "^2.0.0",
-    "@types/underscore": "^1.8.14",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "cookie-parser": "^1.4.4",
@@ -44,12 +43,10 @@
     "jquery": "^3.4.0",
     "multer": "^1.4.1",
     "ng2-file-upload": "^1.3.0",
-    "nodemailer": "^6.1.1",
     "path": "^0.12.7",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.5.1",
     "typescript": "~3.1.1",
-    "underscore": "^1.9.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -68,6 +65,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "nodemon": "^1.18.11",
     "protractor": "~5.4.0",
+    "source-map-explorer": "^1.8.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0"
   }

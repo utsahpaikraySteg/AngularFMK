@@ -35,9 +35,6 @@ export class PetsComponent implements OnInit {
       this.step--;
   }
   ngOnInit() {
-    this.pet.getPets().subscribe(
-      pet => this.pets$ = pet
-    );
   }
 
 }

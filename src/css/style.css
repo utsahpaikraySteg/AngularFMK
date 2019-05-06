@@ -1,0 +1,14 @@
+
+/* === fontawesome === */
+
+@import url('font-awesome.css');
+
+@import url('animate.css');
+@import url('shortcodes.css');
+/* Table of content */
+
+.box .icon {
+  float: left;
+}
+
+

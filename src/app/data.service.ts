@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import * as _ from 'underscore';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -60,32 +58,7 @@ public caseDetails = {
   getUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
-  getUser(userId: string) {
-    return _.findWhere(this.item.items, {productCode: userId });
-  }
-
-  getPosts() {
-    return this.http.get('https://jsonplaceholder.typicode.com/posts');
-  }
-  getPets() {
-    return this.http.get('https://dog.ceo/api/breed/hound/images');
-  }
-  getanimes() {
-    return this.http.get('https://api.jikan.moe/v3/anime/1/characters_staff');
-  }
   sendMail(url: string,data: { name: any; email: any; }){
     return this.http.post(url,data,{responseType: 'text'});
   }
-  uploadFile(data: any): Observable<{}> {
-    this._url = 'https://utsahpaikraysteg.github.io/AngularFMK/uploadFile';
-    return this.http.post(this._url, data,{responseType: 'text'});
-       // .map(this.handleData);
-}
-      private handleData(res: Response) {
-          let data = res.json();
-          return data;
-      }
-      private handleError(error: Response | any) {
-          return Observable.throw('API failed');
-      }
 }

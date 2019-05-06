@@ -17,3 +17,13 @@ echo "sendgrid.env" >> .gitignore
 source ./sendgrid.env
 
 git config core.autocrlf true
+
+ng build --output-path angularapp --base-href /mfksoftware/ --aot --prod
+
+https://angular.io/guide/deployment
+
+
+Api key for sendgrid
+ var appkey1="SG.6LfAiOTJTAOYE082nXpr0w.";
+  var appkey2="4I86ivYPuHAeJfH5KQ5M1o2";
+  var appkey3="-G0pxCimLJUr3imnGd6s"

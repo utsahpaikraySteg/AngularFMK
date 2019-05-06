@@ -11,7 +11,6 @@ import { PostsComponent } from './posts/posts.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatListModule} from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
@@ -29,8 +28,6 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material';
 import { PetsComponent } from './pets/pets.component';
-import { AnimeComponent } from './anime/anime.component';
-import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { RaectiveformComponent } from './raectiveform/raectiveform.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -47,10 +44,7 @@ import { FileUploadModule } from 'ng2-file-upload';
     PostsComponent,
     UsersComponent,
     HomeComponent,
-    DashboardComponent,
     PetsComponent,
-    AnimeComponent,
-    ExponentialStrengthPipe,
     RaectiveformComponent,
     FooterComponent,
     ContactComponent,

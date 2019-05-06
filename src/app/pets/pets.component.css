@@ -24,9 +24,25 @@ ul li {
   transform-origin: center center;
 }
 ul li:hover {
-  cursor: pointer;
   transform: scale(1.01);
   font-weight: 400;
+}
+.webeleive ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.webeleive ul li {
+  background-color: #fbfbfb;
+  width: 166px;
+  margin: 10px;
+  text-align: center;
+  line-height: 31px;
+  font-size: 24px;
+  padding: 5px;
+  border: 1px solid #cbc8e4;
+  box-shadow: 3px 3px #bdb9b9;
+  border-radius: 4px;
 }
 .carrire-apply {
   display: flex;

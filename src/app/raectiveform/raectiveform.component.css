@@ -15,7 +15,7 @@
 }
 mat-form-field {
   background: #fff;
-  height: 77px;
+  height: 78px;
   border-radius: 5px;
 }
 mat-form-field mat-form-field-flex {
@@ -25,5 +25,5 @@ mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline {
   background: #fff;
 }
 .uploadList button {
-  width: 45%;
+  width: 100%;
 }

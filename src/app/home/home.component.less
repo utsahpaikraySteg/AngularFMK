@@ -20,6 +20,9 @@
 
 .img-row {
   margin: 25px 0;
+  display: flex;
+  padding: 0.5em;
+  width: 100%;
 
   img {
     width: auto;
@@ -56,10 +59,9 @@
       color: #00a8ff;
     }
     p {
-      //color: white;
-      font-size: 24px;
-    //  font-weight: 500;
+      font-size: 20px;
     text-align: left;
+    line-height: 28px;
     }
 
     button {
@@ -93,17 +95,21 @@
   }
 }
   .example-card {
-    cursor: pointer;
-    //background-image: linear-gradient(to right, #007bfe, #dad2d9);
-   // border: 1px solid #97b2d1;
+    background: #f4f5f7;
     text-align: center;
-    background: #f9f9f9;
     &.mat-card {
       .mat-card-header-text {
         width: 100%;
       }
       &:hover{
         box-shadow: 0px 1px 6px 6px #dff2f9;
+        i.icon-bgdark {
+          background: #95e295;
+          transform: rotate(360deg);
+        }
+        .learnmore{
+          color:#95e295;
+        }
       }
     }
   }
@@ -129,18 +135,24 @@
 }
 
 mat-card-content.mat-card-content {
-  height: auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  // height: auto;
+  // overflow: hidden;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
   .product-description {
     font-size: 20px;
     padding: 0;
+    position: static;
     p{
       text-align: justify;
-      color: #0c89ca;
-      margin: 10px 0;
+      color: #9ea2a5;
+      font-size: 16px;
+      margin: 30px 0;
+    }
+    h4{
+      margin-top: 20px;
+      margin-bottom: 0;
     }
   }
   .product-card-img{
@@ -216,9 +228,11 @@ mat-card-content.mat-card-content {
   }
 }
 .example-card{
-  .mat-card-header{
+  mat-card-content{
     .header-title{
       width: 100%;
+      margin-top: 10px;
+      display: inline-block;
     }
   }
   }
@@ -231,3 +245,43 @@ mat-card-content.mat-card-content {
           }
       }
     }
+    mat-card {
+      header-title {
+        display: inline-block;
+      }
+    }
+    .uploadList{
+      button{
+        width: auto;
+      }
+    }
+    .demo-section{
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      .learnmore{
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        left: 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #d24726;
+      }
+    }
+    i.icon-bgdark {
+      color: #f7f7f7;
+      background: #d24625;
+      transition: transform .8s ease-in-out;
+      
+    }
+    
+      .modal-header {
+        border-bottom:none;
+        background: #ef7423;
+      }
+      .modal-body {
+        background: #f1f8f9;
+      }

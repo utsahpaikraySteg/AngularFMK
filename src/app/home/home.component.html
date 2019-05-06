@@ -1,108 +1,119 @@
 <div class="container-fluid">
   <div class="row">
-    <!-- <section class="example-section">
-      <label class="example-margin">Color:</label>
-      <mat-radio-group  [(ngModel)]="data.caseDetails.color">
-        <mat-radio-button class="example-margin" value="#dc3545">
-            #dc3545
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="#a535dc">
-            #a535dc
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="#35dc98">
-            #35dc98
-        </mat-radio-button>
-      </mat-radio-group>
-    </section> [ngStyle]="{'background-color':data.caseDetails.color}"-->
     <div class="">
-        <div *ngIf="item" @myInsertRemoveTrigger class="selectedproduct">
-          <div>
-             <div>
-                <mat-card class="example-card">
-                  <div class="col-12 col-md-6">
-                    <h3 class="application-text">The most user friendly ERP application for academic institutions</h3>
-                    <p *ngIf="item.items[0].content.productFullDescription">MFK Software ERP is a robust, easy to use, highly customize and the most secured application for educational institutions. 
-                    </p>
-                    <div class="col-12">
-                    <button  (click)="open(onlinedemoform)" mat-raised-button matTooltip="ERP Demo" aria-label="Button that displays a tooltip when focused or hovered over">ERP Demo</button>
-                    <!-- <button class="btn btn-dark btn-md">Demo</button> -->
-                    </div>
-                    
+      <div *ngIf="item" @myInsertRemoveTrigger class="selectedproduct">
+        <div>
+           <div>
+              <mat-card class="example-card">
+                <div class="col-12 col-md-6 animated fadeInDown">
+                  <h3 class="application-text">The most user friendly ERP application for academic institutions</h3>
+                  <p *ngIf="item.items[0].content.productFullDescription">MFK Software ERP is a robust, easy to use, highly customize and the most secured application for educational institutions. 
+                  </p>
+                  <div class="col-12">
+                  <button  (click)="open(onlinedemoform)" mat-raised-button matTooltip="ERP Demo" aria-label="Button that displays a tooltip when focused or hovered over">ERP Demo</button>
                   </div>
-                <div class="col-12 col-md-6 cardimage">
-                    <img class="rounded border" mat-card-image src="assets/demo.png" alt="{Photo of a Shiba Inu}">
-                </div> 
-                </mat-card>
-            </div> 
-          </div>
-      </div>
+                  
+                </div>
+              <div class="col-12 col-md-6 cardimage">
+                  <img class="rounded border animated bounceInDown" mat-card-image src="assets/demo.png" alt="{Photo of a Shiba Inu}">
+              </div> 
+              </mat-card>
+          </div> 
+        </div>
     </div>
-    <!-- <div class="col-12">
-        <div class="row items" *ngIf="item">
-            <div *ngFor="let item of item.items" class="col-12 col-md-4 img-row rounded" (mouseenter)="productSelection=item.content.productName">
-                <a routerLink="/{{item.link}}">
-                  <mat-card class="example-card" matTooltip="{{item.content.productName}}">
-                  
-                      <div class="header-title"> 
-                        <mat-card-title>{{item.content.productName}}</mat-card-title>
-                      </div>
-                
+  </div>
+
+
+
+
+
+  <div class="col-12 demo-section">
+      <div class="row items" >
+            <div @myInsertRemoveTrigger class="col-12 col-sm-12 col-md-12 col-xl-4 img-row rounded box flyLeft animated bounceInLeft">
+              
+                  <mat-card class="example-card" matTooltip="Online Demo">  
+                    <div class="header-title"> 
+                        <div class="icon">
+                            <i class="ico icon-circled icon-bgdark icon-star active icon-3x"></i>
+                        </div>
+                    </div>
                     <mat-card-content>
-                        <img class="rounded" mat-card-image src="{{item.mainImage.src}}"
-                        alt="{Photo of a Shiba Inu}">
-                    </mat-card-content>
-                    <mat-card-actions>
-                    </mat-card-actions>
-                  </mat-card>
-              </a>
-            </div>
-          </div>
-    </div> -->
-    <div class="col-12">
-        <div class="row items" *ngIf="item">
-            <div *ngFor="let item of item.items" @myInsertRemoveTrigger class="col-12 img-row rounded" (mouseenter)="productSelection=item.content.productName">
-                <a routerLink="/{{item.link}}">
-                  <mat-card class="example-card" matTooltip="{{item.content.productName}}">
-                  
-                      <div class="header-title"> 
-                        <mat-card-title>{{item.content.productName}}</mat-card-title>
-                      </div>
-                
-                    <mat-card-content>
-                      <div class="col-md-6 product-card-img">
-                          <img class="rounded" mat-card-image src="{{item.mainImage.src}}"
-                          alt="{Photo of a Shiba Inu}">
-                      </div>
-                      <div class="col-md-6 product-description">
-                        <p>{{item.content.productFullDescription}}</p>
+                        
+                      <div class="col-12 product-description">
+                          <div class="">
+                              <h4> <strong>ERP Demo</strong> </h4>
+                              <p>
+                                  MFK Software ERP System is the most user friendly ERP application that can help you in taking care of your student data, teacher data, academic data, employee data, payroll, registration, admission, books, fees, mark sheet, report.....
+                              </p>
+                              <a  class="learnmore" routerLink="/onlinedemo">Learn More</a>
+                            </div>
                       </div>
                         
                     </mat-card-content>
                   </mat-card>
-              </a>
             </div>
+            <div @myInsertRemoveTrigger class="col-12 col-sm-12 col-md-12 col-xl-4 img-row rounded box flyLeft animated bounceInRight">
+              
+                <mat-card class="example-card" matTooltip="">  
+                  <div class="header-title"> 
+                      <div class="icon">
+                          <i class="ico icon-circled icon-bgdark icon-laptop active icon-3x"></i>
+                        </div>
+                  </div>
+                  <mat-card-content>
+                      
+                    <div class="col-12 product-description">
+                        <div class="">
+                            <h4><strong>Culture Booklet</strong></h4>
+                            <p>
+                                Culture Booklet is a platform that brings you astonishing stuff about various beautiful and diverse cultures from different corners of the world. ...
+                            </p>
+                            <a class="learnmore" routerLink="/culturebooklet">Learn More</a>
+                          </div>
+                    </div>
+                      
+                  </mat-card-content>
+                </mat-card>
+            </div>
+              <div @myInsertRemoveTrigger class="col-12 col-sm-12 col-md-12 col-xl-4 img-row rounded box flyLeft animated bounceInLeft">
+                  
+                  <mat-card class="example-card" matTooltip="carrier">  
+                    <div class="header-title"> 
+                        <div class="icon">
+                            <i class="ico icon-circled icon-bgdark icon-dropbox active icon-3x"></i>
+                          </div>
+                    </div>
+                    <mat-card-content>
+                        
+                      <div class="col-12 product-description">
+                          <div class="">
+                              <h4> <strong> Carrier</strong></h4>
+                              <p>
+                                  Software established in 1996, MFK Software began as a dream of a few friends who wanted to create a company with a difference –...
+                              </p>
+                              <a class="learnmore" routerLink="/carrier">Learn More</a>
+                            </div>
+                      </div>
+                        
+                    </mat-card-content>
+                  </mat-card>
+            </div>
+      </div>
+  </div>
+  </div>
+
+  <ng-template #onlinedemoform let-modal>
+    <div class="">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Online Demo Form</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-raectiveform></app-raectiveform>
           </div>
     </div>
-  </div>
-  <!-- <div class="modal" id="onlinedemoform">
-      <div class="modal-dialog">
-        <div class="modal-content">                     
-          <div class="modal-body">
-            <h2>Online Demo Form</h2>
-              <app-raectiveform></app-raectiveform>
-          </div> 
-        </div>
-      </div>
-  </div> -->
-  <ng-template #onlinedemoform let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Online Demo Form</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <app-raectiveform></app-raectiveform>
-    </div>
+    
   </ng-template>
 </div>

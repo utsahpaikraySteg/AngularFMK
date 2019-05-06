@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
     this.color = this.data.caseDetails.color;
-    console.log(this.color);
+    
   }
 
 }

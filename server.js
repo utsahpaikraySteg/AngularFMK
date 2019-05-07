@@ -16,7 +16,8 @@ const posts= require('./server/routes/posts');
      res.sendFile(path.join(__dirname, 'dist/index.html'));
  });
  const ABSPATH = path.dirname(process.mainModule.filename);
- var dir = './MFKsoftware';
+ var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
+ var dir = res+'/MFKsoftware';
  
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);

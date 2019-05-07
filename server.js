@@ -17,7 +17,7 @@ const posts= require('./server/routes/posts');
  });
  const ABSPATH = path.dirname(process.mainModule.filename);
  var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
- var dir = res+'/MFKsoftware';
+ var dir = 'D:/MFKsoftware';
  
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);
@@ -70,7 +70,7 @@ app.post('/sendmail', (req,res)=>{
 
   var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
  //var filepath=res+"/MFKsoftware/";
-  var filepath=res+"/MFKsoftware/"+req.body.uploadfile;
+  var filepath=res+"D:/MFKsoftware/"+req.body.uploadfile;
   
   
 var from=req;

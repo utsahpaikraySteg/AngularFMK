@@ -69,7 +69,7 @@ app.post('/sendmail', (req,res)=>{
 
   var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
  //var filepath=res+"/MFKsoftware/";
-  var filepath=res+"/MFKsoftware/"+'/'+req.body.uploadfile;
+  var filepath=res+"/MFKsoftware/"+req.body.uploadfile;
   
   
 var from=req;

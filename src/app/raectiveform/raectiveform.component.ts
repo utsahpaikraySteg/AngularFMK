@@ -8,8 +8,8 @@ import { DataService } from '../data.service';
 import {  FileUploader} from 'ng2-file-upload/ng2-file-upload';
 
 //const URL = 'https://mfksoftware.herokuapp.com/posts';
-const uri = 'https://mfksoftware.herokuapp.com/uploads';
-//const uri = 'http://localhost:3000/uploads';
+//const uri = 'https://mfksoftware.herokuapp.com/uploads';
+const uri = 'http://localhost:3000/uploads';
 @Component({
   selector: 'app-raectiveform',
   templateUrl: './raectiveform.component.html',
@@ -66,7 +66,7 @@ export class RaectiveformComponent implements OnInit {
 
 
     if (this.registerForm.valid) {
-      this.data.sendMail("https://mfksoftware.herokuapp.com/sendmail", user).subscribe(
+      this.data.sendMail("http://localhost:3000/sendmail", user).subscribe(
         data => {
           this.snackBar.openFromComponent(ConfirmsnackbarComponent, {
             duration: 1000,

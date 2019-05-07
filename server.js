@@ -28,15 +28,16 @@ const posts= require('./server/routes/posts');
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);
  }
-
+ 
  app.use('/posts',posts);
 
 var store = multer.diskStorage({
-  destination:function(req,file,cb){
+  destination:function(req,file,cb,path){
+    console.log(path);
       cb(null, dir);
   },
   filename:function(req,file,cb,path){
-      console.log(path);
+      console.log(file);
       cb(null, new Date().toJSON().replace(new RegExp(':', 'g'),'.')+'.'+file.originalname);
   }
   
@@ -113,8 +114,8 @@ var from=req;
 });
 
 var server = require('http').createServer(app);
-//const port = process.env.PORT || 3000;
-const port = process.env.PORT || 'https://mfksoftware.herokuapp.com';
+const port = process.env.PORT || 3000;
+//onst port = process.env.PORT || 'https://mfksoftware.herokuapp.com';
  
 server.listen(port, function () {
   console.log(`Node.js server is running on port ${port}`);

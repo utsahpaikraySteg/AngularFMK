@@ -75,7 +75,7 @@ export class RaectiveformComponent implements OnInit {
           for(let name in this.registerForm.controls) {
             this.registerForm.controls[name].setErrors(null);
           }
-          this.uploader.queue=[];
+        //  this.uploader.queue=[];
           console.log(this.uploader);
         },
         err => {

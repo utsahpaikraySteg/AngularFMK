@@ -18,16 +18,16 @@ const posts= require('./server/routes/posts');
  });
  const ABSPATH = path.dirname(process.mainModule.filename);
  var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
- var dir = 'D:/MFKsoftware';
+ var dir = '/MFKsoftware';
  
-  (async () => {
-    const path = await makeDir('/././MFKsoftware');
-    console.log(path);
-  })();
+  // (async () => {
+  //   const path = await makeDir('/MFKsoftware');
+  //   console.log(path);
+  // })();
 
-//  if (!fs.existsSync(dir)){
-//      fs.mkdirSync(dir);
-//  }
+ if (!fs.existsSync(dir)){
+     fs.mkdirSync(dir);
+ }
 
  app.use('/posts',posts);
 
@@ -35,9 +35,11 @@ var store = multer.diskStorage({
   destination:function(req,file,cb){
       cb(null, dir);
   },
-  filename:function(req,file,cb){
+  filename:function(req,file,cb,path){
+      console.log(path);
       cb(null, new Date().toJSON().replace(new RegExp(':', 'g'),'.')+'.'+file.originalname);
   }
+  
   
 });
 var upload = multer({storage:store}).single('file');
@@ -74,7 +76,7 @@ app.post('/sendmail', (req,res)=>{
   var SENDGRID_APY_KEY = appkey1+appkey2+appkey3;
   sgMail.setApiKey(SENDGRID_APY_KEY);
 
-  var filepath="D:/MFKsoftware/"+req.body.uploadfile;
+  var filepath="/MFKsoftware/"+req.body.uploadfile;
   
   
 var from=req;

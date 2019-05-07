@@ -20,6 +20,7 @@ const posts= require('./server/routes/posts');
  
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);
+     console.log(dir);
  }
 
  var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
@@ -63,13 +64,13 @@ app.post('/uploads', function(req,res,next){
 
 app.post('/sendmail', (req,res)=>{
   
-  var appkey1="a";
-  var appkey2="a";
-  var appkey3="a"
-  
+  var appkey1="SG.6LfAiOTJTAOYE082nXpr0w.";
+  var appkey2="4I86ivYPuHAeJfH5KQ5M1o2";
+  var appkey3="-G0pxCimLJUr3imnGd6s";
+
   var SENDGRID_APY_KEY = appkey1+appkey2+appkey3;
   sgMail.setApiKey(SENDGRID_APY_KEY);
-var filepath=filepath+'/'+req.body.uploadfile;
+  var filepath=filepath+'/'+req.body.uploadfile;
   
   
 var from=req;

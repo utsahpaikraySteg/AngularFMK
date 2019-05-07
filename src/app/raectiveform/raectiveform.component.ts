@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModalConfig, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { MatSnackBar } from '@angular/material';
 import { ConfirmsnackbarComponent } from '../confirmsnackbar/confirmsnackbar.component';

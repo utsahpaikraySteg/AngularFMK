@@ -68,7 +68,7 @@ export class RaectiveformComponent implements OnInit {
 
 
     if (this.registerForm.valid) {
-      this.data.sendMail("http://localhost:3000/sendmail", user).subscribe(
+      this.data.sendMail("https://mfksoftware.herokuapp.com/sendmail", user).subscribe(
         data => {
           this.snackBar.openFromComponent(ConfirmsnackbarComponent, {
             duration: 1000,

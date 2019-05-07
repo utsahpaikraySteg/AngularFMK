@@ -196,11 +196,11 @@ mat-card header-title {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #d24726;
+  color: #00a8ff;
 }
 i.icon-bgdark {
   color: #f7f7f7;
-  background: #d24625;
+  background: #00a8ff;
   transition: transform 0.8s ease-in-out;
 }
 .modal-header {

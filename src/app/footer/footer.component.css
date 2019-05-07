@@ -1,0 +1,27 @@
+footer {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #20a1ce;
+  height: 75px;
+}
+footer .container-links {
+  text-align: center;
+  line-height: 75px;
+}
+footer .container-links .mz-pagefooter-copyrighttext {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+footer .container-links .footer-nav {
+  color: #fff;
+}
+footer .container-links .footer-nav a {
+  color: #fff;
+}
+footer .container-links ul {
+  list-style: none;
+  padding: 0;
+}
+footer .container-links ul li a {
+  color: #fff;
+}

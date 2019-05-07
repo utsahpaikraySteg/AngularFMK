@@ -8,6 +8,7 @@ const app = express();
 const router = express.Router();
 const cors = require('cors');
 const sgMail = require('@sendgrid/mail');
+const makeDir = require('make-dir');
 app.use(cors({origin:'*'}));
 
 const posts= require('./server/routes/posts');
@@ -19,9 +20,14 @@ const posts= require('./server/routes/posts');
  var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
  var dir = 'D:/MFKsoftware';
  
- if (!fs.existsSync(dir)){
-     fs.mkdirSync(dir);
- }
+  (async () => {
+    const path = await makeDir('/././MFKsoftware');
+    console.log(path);
+  })();
+
+//  if (!fs.existsSync(dir)){
+//      fs.mkdirSync(dir);
+//  }
 
  app.use('/posts',posts);
 
@@ -68,9 +74,7 @@ app.post('/sendmail', (req,res)=>{
   var SENDGRID_APY_KEY = appkey1+appkey2+appkey3;
   sgMail.setApiKey(SENDGRID_APY_KEY);
 
-  var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
- //var filepath=res+"/MFKsoftware/";
-  var filepath=res+"D:/MFKsoftware/"+req.body.uploadfile;
+  var filepath="D:/MFKsoftware/"+req.body.uploadfile;
   
   
 var from=req;

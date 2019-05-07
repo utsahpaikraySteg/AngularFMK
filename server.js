@@ -114,8 +114,8 @@ var from=req;
 });
 
 var server = require('http').createServer(app);
-const port = process.env.PORT || 3000;
-//onst port = process.env.PORT || 'https://mfksoftware.herokuapp.com';
+//const port = process.env.PORT || 3000;
+const port = process.env.PORT || 'https://mfksoftware.herokuapp.com';
  
 server.listen(port, function () {
   console.log(`Node.js server is running on port ${port}`);

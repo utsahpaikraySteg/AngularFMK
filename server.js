@@ -68,7 +68,7 @@ app.post('/sendmail', (req,res)=>{
 
   var SENDGRID_APY_KEY = appkey1+appkey2+appkey3;
   sgMail.setApiKey(SENDGRID_APY_KEY);
-  var filepath="C:/Users/Public/Downloads/MFKsoftware"+'/'+req.body.uploadfile;
+  var filepath="C:/Users/Public/Downloads/MFKsoftware/"+req.body.uploadfile;
   
   
 var from=req;

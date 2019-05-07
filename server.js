@@ -16,7 +16,7 @@ const posts= require('./server/routes/posts');
      res.sendFile(path.join(__dirname, 'dist/index.html'));
  });
  const ABSPATH = path.dirname(process.mainModule.filename);
- var dir = './MFKsoftware';
+ var dir = 'C:/Users/Public/Downloads/MFKsoftware';
  
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);
@@ -64,13 +64,13 @@ app.post('/uploads', function(req,res,next){
 
 app.post('/sendmail', (req,res)=>{
   
-  var appkey1="SG.6LfAiOTJTAOYE082nXpr0w.";
+  var appkey1=".6LfAiOTJTAOYE082nXpr0w.";
   var appkey2="4I86ivYPuHAeJfH5KQ5M1o2";
   var appkey3="-G0pxCimLJUr3imnGd6s";
 
-  var SENDGRID_APY_KEY = appkey1+appkey2+appkey3;
-  sgMail.setApiKey(SENDGRID_APY_KEY);
-  var filepath=filepath+'/'+req.body.uploadfile;
+  var APY_KEY = "SG"+appkey1+appkey2+appkey3;
+  sgMail.setApiKey(APY_KEY);
+  var filepath="C:/Users/Public/Downloads/MFKsoftware/"+req.body.uploadfile;
   
   
 var from=req;

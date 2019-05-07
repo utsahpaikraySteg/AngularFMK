@@ -10,8 +10,8 @@ import { DataService } from '../data.service';
 import {  FileUploader} from 'ng2-file-upload/ng2-file-upload';
 
 //const URL = 'https://mfksoftware.herokuapp.com/posts';
-//const uri = 'https://mfksoftware.herokuapp.com/uploads';
-const uri = 'http://localhost:3000/uploads';
+const uri = 'https://mfksoftware.herokuapp.com/uploads';
+//const uri = 'http://localhost:3000/uploads';
 @Component({
   selector: 'app-raectiveform',
   templateUrl: './raectiveform.component.html',

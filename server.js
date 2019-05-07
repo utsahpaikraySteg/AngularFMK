@@ -4,11 +4,13 @@ const express = require('express');
 const multer = require('multer');
 const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var compression = require('compression')
 const app = express();
 const router = express.Router();
 const cors = require('cors');
 const sgMail = require('@sendgrid/mail');
 app.use(cors({origin:'*'}));
+app.use(compression());
 
 const posts= require('./server/routes/posts');
  app.use(express.static(path.join(__dirname,'dist')));
@@ -21,7 +23,6 @@ const posts= require('./server/routes/posts');
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);
  }
-
  var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
  var filepath=ABSPATH+"/MFKsoftware/";
  app.use('/posts',posts);
@@ -106,8 +107,8 @@ var from=req;
 });
 
 var server = require('http').createServer(app);
-const port = process.env.PORT || 3000;
-//const port = process.env.PORT || 'https://mfksoftware.herokuapp.com';
+//const port = process.env.PORT || 3000;
+const port = process.env.PORT || 'https://mfksoftware.herokuapp.com';
  
 server.listen(port, function () {
   console.log(`Node.js server is running on port ${port}`);

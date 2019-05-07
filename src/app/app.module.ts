@@ -35,6 +35,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContactComponent } from './contact/contact.component';
 import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 // import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
 @NgModule({
@@ -82,7 +84,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     MatSidenavModule,
     MatSnackBarModule,
     MatExpansionModule,
-    FileUploadModule 
+    FileUploadModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) 
     // REACTIVE_FORM_DIRECTIVES
   ],
   providers: [ NgbActiveModal,  MatDatepickerModule, MatNativeDateModule],

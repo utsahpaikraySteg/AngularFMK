@@ -70,12 +70,12 @@ app.post('/uploads', function(req,res,next){
 
 app.post('/sendmail', (req,res)=>{
   
-  var appkey1="SG.6LfAiOTJTAOYE082nXpr0w.";
-  var appkey2="4I86ivYPuHAeJfH5KQ5M1o2";
-  var appkey3="-G0pxCimLJUr3imnGd6s";
+  var appkey1="Nb03odE-Rhq-F980WinuaQ.";
+  var appkey2="w7KAW7s47lfwMrdXus0Hx";
+  var appkey3="FIs2rfa25rgCNzgylQR9wU";
 
-  var SENDGRID_APY_KEY = appkey1+appkey2+appkey3;
-  sgMail.setApiKey(SENDGRID_APY_KEY);
+  var key = appkey1+appkey2+appkey3;
+  sgMail.setApiKey("SG."+key);
 
   var filepath="/usr/"+req.body.uploadfile;
   
@@ -87,14 +87,6 @@ var from=req;
     subject: from.body.instituteName,
     text: 'Hi,' + from.body.name +'I am interested for the demo',
     html: '<div style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#f3f2f0;"><b>Hello, <p>'+ from.body.name +' I am interested for the demo</p><p><strong> Institute Name:'+from.body.instituteName +'</strong></p>\n<p><b>PreffredContactTime:'+ from.body.PreffredContactTime+' </b></p>\n<p><b>Query:'+ from.body.query+' </b></p></div>',
-    templateId: 'd-5604f7c4e7a046db9524e789cb930d34',
-    dynamic_template_data: {
-      subject: 'Testing Templates',
-      name: from.body.name,
-      PreffredContactTime:from.body.PreffredContactTime,
-      instituteName:from.body.instituteName,
-      query:from.body.query
-    },
     attachments: [
       {
         content: "filepath",

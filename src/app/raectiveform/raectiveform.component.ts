@@ -25,7 +25,7 @@ export class RaectiveformComponent implements OnInit {
   uploader:FileUploader = new FileUploader({url:uri});
   attachmentList:any = [];
   localUrl: any[];
-  constructor(private formBuilder: FormBuilder, config: NgbModalConfig, private modalService: NgbModal, public modal: NgbActiveModal, private snackBar: MatSnackBar, private http: HttpClient, private data: DataService) {
+  constructor(private formBuilder: FormBuilder, private modalService: NgbModal, public modal: NgbActiveModal, private snackBar: MatSnackBar, private http: HttpClient, private data: DataService) {
         this.uploader.onCompleteItem = (item:any, response:any , status:any, headers:any) => {
           this.attachmentList.push(JSON.parse(response));
       }
@@ -50,18 +50,6 @@ export class RaectiveformComponent implements OnInit {
     return this.registerForm.controls;
   }
 
-  //  showPreviewImage(event: any) {
-  //      if (event.target.files && event.target.files[0]) {
-  //          var reader = new FileReader();
-  //          reader.onload = (event: any) => {
-  //            console.log(event.target.result);
-             
-  //             // this.localUrl = event.target.result;
-  //          }
-  //          console.log(event.target.files[0]);
-  //          reader.readAsDataURL(event.target.files[0]);
-  //      }
-  //  }
   onSubmit() {
     let user = {
       name: this.registerForm.value.firstName,
@@ -88,7 +76,6 @@ export class RaectiveformComponent implements OnInit {
             this.registerForm.controls[name].setErrors(null);
           }
           this.uploader.queue=[];
-          //console.log(this.uploader);
         },
         err => {
           console.log(err);

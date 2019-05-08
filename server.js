@@ -8,7 +8,6 @@ const app = express();
 const router = express.Router();
 const cors = require('cors');
 const sgMail = require('@sendgrid/mail');
-const makeDir = require('make-dir');
 var tmp = require('tmp');
 app.use(cors({origin:'*'}));
 
@@ -17,15 +16,8 @@ const posts= require('./server/routes/posts');
  app.get('*', function(req, res) {
      res.sendFile(path.join(__dirname, 'dist/index.html'));
  });
- //const ABSPATH = path.dirname(process.mainModule.filename);
- //var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
- var dir = '/usr';
- 
-  // (async () => {
-  //   const path = await makeDir('/MFKsoftware');
-  //   console.log(path);
-  // })();
 
+ var dir = '/usr';
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);
  }
@@ -38,17 +30,15 @@ var store = multer.diskStorage({
       cb(null,  tmpobj.name);
   },
   filename:function(req,file,cb){
-      cb(null, new Date().toJSON().replace(new RegExp(':', 'g'),'.')+'.'+file.originalname);
+      cb(null, file.originalname);
   }
   
   
 });
 var upload = multer({storage:store}).single('file');
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-
 router.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
@@ -67,34 +57,37 @@ app.post('/uploads', function(req,res,next){
       return res.json({originalname:req.file.originalname, uploadname:req.file.filename});
   });
 });
-
 app.post('/sendmail', (req,res)=>{
-  
+
   var appkey1="Nb03odE-Rhq-F980WinuaQ.";
   var appkey2="w7KAW7s47lfwMrdXus0Hx";
   var appkey3="FIs2rfa25rgCNzgylQR9wU";
-
   var key = appkey1+appkey2+appkey3;
   sgMail.setApiKey("SG."+key);
-
   var filepath=tmpobj.name+"/"+req.body.uploadfile;
-  
+    var base64= fs.readFileSync(filepath, { encoding: 'base64' });
 var from=req;
   const msg = {
     to: 'paikrayu@gmail.com',
     from: from.body.email,
     subject: from.body.instituteName,
-    text: 'Hi,' + from.body.name +'I am interested for the demo',
-    html: '<div style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#f3f2f0;"><b>Hello, <p>'+ from.body.name +' I am interested for the demo</p><p><strong> Institute Name:'+from.body.instituteName +'</strong></p>\n<p><b>PreffredContactTime:'+ from.body.PreffredContactTime+' </b></p>\n<p><b>Query:'+ from.body.query+' </b></p></div>',
+    templateId:'d-62f28fee8a81428bac5bf1271636dae8',
+    dynamic_template_data: {
+      subject: 'Online Demo',
+      name: from.body.name,
+      PreffredContactTime:from.body.PreffredContactTime,
+      instituteName:from.body.instituteName,
+      query:from.body.query
+    },
     attachments: [
       {
-        content: "filepath",
+        content: base64,
         filename: filepath,
         type: 'plain/text',
         disposition: 'attachment',
         content_id: 'mytext'
       },
-    ],
+    ]
   };
   sgMail.send(msg, function(err, info){
     if(err)

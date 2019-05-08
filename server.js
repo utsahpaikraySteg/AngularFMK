@@ -16,9 +16,9 @@ const posts= require('./server/routes/posts');
  app.get('*', function(req, res) {
      res.sendFile(path.join(__dirname, 'dist/index.html'));
  });
- const ABSPATH = path.dirname(process.mainModule.filename);
- var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
- var dir = '/usr/MFKsoftware';
+ //const ABSPATH = path.dirname(process.mainModule.filename);
+ //var res = ABSPATH.replace(new RegExp("\\\\", 'g'), "/");
+ var dir = '/usr';
  
   // (async () => {
   //   const path = await makeDir('/MFKsoftware');
@@ -77,8 +77,10 @@ app.post('/sendmail', (req,res)=>{
   var key = appkey1+appkey2+appkey3;
   sgMail.setApiKey("SG."+key);
 
-  var filepath="/usr/MFKsoftware/"+req.body.uploadfile;
-  
+  var filepath="/usr/"+req.body.uploadfile;
+  fs.readFile(filepath, function(err, buf) {
+    console.log(buf);
+  });
   
 var from=req;
   const msg = {

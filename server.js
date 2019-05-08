@@ -9,6 +9,7 @@ const router = express.Router();
 const cors = require('cors');
 const sgMail = require('@sendgrid/mail');
 const makeDir = require('make-dir');
+var tmp = require('tmp');
 app.use(cors({origin:'*'}));
 
 const posts= require('./server/routes/posts');
@@ -28,16 +29,15 @@ const posts= require('./server/routes/posts');
  if (!fs.existsSync(dir)){
      fs.mkdirSync(dir);
  }
- 
+ var tmpobj = tmp.dirSync();
+console.log('Dir: ', tmpobj.name);
  app.use('/posts',posts);
 
 var store = multer.diskStorage({
-  destination:function(req,file,cb,path){
-    console.log(path);
-      cb(null, dir);
+  destination:function(req,file,cb){
+      cb(null,  tmpobj.name);
   },
-  filename:function(req,file,cb,path){
-      console.log(file);
+  filename:function(req,file,cb){
       cb(null, new Date().toJSON().replace(new RegExp(':', 'g'),'.')+'.'+file.originalname);
   }
   
@@ -77,10 +77,7 @@ app.post('/sendmail', (req,res)=>{
   var key = appkey1+appkey2+appkey3;
   sgMail.setApiKey("SG."+key);
 
-  var filepath="/usr/"+req.body.uploadfile;
-  fs.readFile(filepath, function(err, buf) {
-    console.log(buf);
-  });
+  var filepath=tmpobj.name+"/"+req.body.uploadfile;
   
 var from=req;
   const msg = {

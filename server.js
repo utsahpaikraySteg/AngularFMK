@@ -17,7 +17,7 @@ app.use(cors({origin:'*'}));
  });
  
  //app.use('/posts',posts);
- var dir = process.env.TEMP+ '/upload';
+ var dir = '/usr'+ '/upload';
  if (!fs.existsSync(dir)){
    fs.mkdirSync(dir);
  }

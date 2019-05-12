@@ -18,9 +18,9 @@ app.use(cors({origin:'*'}));
  
  //app.use('/posts',posts);
  var dir = '/usr';
- if (!fs.existsSync(dir)){
-   fs.mkdirSync(dir);
- }
+//  if (!fs.existsSync(dir)){
+//    fs.mkdirSync(dir);
+//  }
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
@@ -35,7 +35,7 @@ router.use((req, res, next) => {
   next();
 });
 app.post('/uploads', function(req,res,next){
-  tmpobj = tmp.dirSync();
+  //tmpobj = tmp.dirSync();
   var store = multer.diskStorage({
     destination:function(req,file,cb){
         cb(null, dir);

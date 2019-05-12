@@ -19,7 +19,7 @@ const routes: Routes = [
     component: PostsComponent
   },
   {
-    path: 'carrier',
+    path: 'career',
     component: PetsComponent
   },
   {

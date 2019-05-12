@@ -25,19 +25,10 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Injectable({ providedIn: 'root' })
 export class HomeComponent implements OnInit {
   closeResult: string;
-  showNavigationArrows = false;
-  showNavigationIndicators = true;
   productSelection: any;
   item: any;
   color:any;
-  constructor(config: NgbCarouselConfig, private data: DataService, private modalService: NgbModal) {
-    // customize default values of carousels used by this component tree
-    config.interval = 10000;
-    config.wrap = true;
-    config.keyboard = false;
-    config.pauseOnHover = false;
-    config.showNavigationArrows = true;
-    config.showNavigationIndicators = true;
+  constructor(private data: DataService, private modalService: NgbModal) {
   }
    
   ngOnInit() {

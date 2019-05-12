@@ -61,4 +61,7 @@ public caseDetails = {
   sendMail(url: string,data: { name: any; email: any; }){
     return this.http.post(url,data,{responseType: 'text'});
   }
+  sendMailwithattachment(url: string,data: { name: any; email: any; }){
+    return this.http.post(url,data,{responseType: 'text'});
+  }
 }

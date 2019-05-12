@@ -1,20 +1,25 @@
 <div class="row"  @myInsertRemoveTrigger>
   <div class="col-md-12">
     <h1 class="text-center text-primary font-weight-bold">Career at MFK Software </h1>
-    <h4 class="text-primary heading-2"><span>We Believe in</span> </h4>
-    <div  @myInsertRemoveTrigger class="col-12 p-0 webeleive">
-      <ul class="animated bounceInLeft">
-        <li>Passion</li>
-        <li>Enthusiasm </li>
-        <li>Honesty</li>
-        <li>Loyalty </li>
-        <li>Trust </li>
-      </ul>
-    </div>
+    <p class="mfk-heading">MFK Software always encourages aspiring talents to become a part of its team. At MFK Software we value your education, talent, silks & more importantly time. Let’s do some magic together that will inspire the future.</p>
+    <!-- <h4 class="text-primary heading-2"><span>We Believe in</span> </h4> -->
+    <mat-card> 
+        <mat-card-content>
+          <div  @myInsertRemoveTrigger class="col-12 p-0 webeleive">
+            <ul class="animated bounceInLeft">
+              <li>Passion</li>
+              <li>Enthusiasm </li>
+              <li>Honesty</li>
+              <li>Loyalty </li>
+              <li>Trust </li>
+            </ul>
+          </div>
+        </mat-card-content>
+    </mat-card>
     <h4 class="text-primary heading-2"><span>Open Positions</span> </h4>
     <div class="open-positions">
       <mat-accordion class="example-headers-align"  @myInsertRemoveTrigger>
-        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+        <mat-expansion-panel  hideToggle>
           <mat-expansion-panel-header>
             <mat-panel-title>
                 <h5> XYZ Specialist </h5>
@@ -49,11 +54,14 @@
                 </div>
           </div>
           <mat-action-row>
-              <button mat-button color="primary" (click)="nextStep()">Next</button>
-            </mat-action-row>
+              <!-- <button mat-button color="primary" (click)="nextStep()">Next</button> -->
+              <div class="col-12 carrire-apply">
+                <button class="btn btn-sm" (click)="send('XYZ')" (click)="open(careerform)"> Apply </button>
+              </div>
+          </mat-action-row>
         </mat-expansion-panel>
       
-        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+        <mat-expansion-panel  hideToggle>
           <mat-expansion-panel-header>
             <mat-panel-title>
                 <h5> ABC Specialist </h5>
@@ -88,8 +96,11 @@
                 </div>
           </div>
           <mat-action-row>
-            <button mat-button color="primary" (click)="prevStep()">Prev</button>
-            <button mat-button color="primary" (click)="nextStep()">Next</button>
+            <!-- <button mat-button color="primary" (click)="prevStep()">Prev</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button> -->
+            <div class="col-12 carrire-apply">
+              <button class="btn btn-sm"  (click)="send('ABC')" (click)="open(careerform)"> Apply </button>
+            </div>
           </mat-action-row>
           
         </mat-expansion-panel>
@@ -97,10 +108,24 @@
     </mat-accordion>
     </div>
     <!-- <p class="font-weight-bold carrier-mailto">Email:career@mfksoftwarecom</p> -->
-    <div class="col-12 carrire-apply">
+    <!-- <div class="col-12 carrire-apply">
       <button class="btn btn-md"> Apply </button>
-    </div>
+    </div> -->
 
   </div>
+
+
+  <ng-template #careerform let-modal>
+          <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Career Form</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <app-carrier-form></app-carrier-form>
+            </div>
+      
+    </ng-template>
 </div>
 

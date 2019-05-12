@@ -26,7 +26,5 @@
   transform-origin: center center;
 }
 .online-demo .description ul li:hover {
-  background-color: #f14ad4;
-  cursor: pointer;
   transform: scale(1.04);
 }

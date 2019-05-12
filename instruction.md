@@ -18,7 +18,7 @@ source ./sendgrid.env
 
 git config core.autocrlf true
 
-ng build --output-path angularapp --base-href /mfksoftware/ --aot --prod
+ng build --base-href https://www.mfksoftware.com --aot --prod
 
 https://angular.io/guide/deployment
 

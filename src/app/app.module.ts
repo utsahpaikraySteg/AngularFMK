@@ -35,6 +35,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContactComponent } from './contact/contact.component';
 import { ConfirmsnackbarComponent } from './confirmsnackbar/confirmsnackbar.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { CarrierFormComponent } from './carrier-form/carrier-form.component';
 // import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
 @NgModule({
@@ -48,7 +49,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     RaectiveformComponent,
     FooterComponent,
     ContactComponent,
-    ConfirmsnackbarComponent
+    ConfirmsnackbarComponent,
+    CarrierFormComponent
   ],
   entryComponents: [ConfirmsnackbarComponent],
   imports: [

@@ -42,6 +42,7 @@
 .selectedproduct .mat-card h3 {
   text-align: left;
   color: #00a8ff;
+  font-weight: bold;
 }
 .selectedproduct .mat-card p {
   font-size: 20px;

@@ -49,12 +49,22 @@ ul li:hover {
   justify-content: center;
 }
 .carrire-apply button {
-  width: 30vw;
-  padding: 6px 17px;
+  width: 150px;
+  padding: 6px 6px;
   margin: 5px;
-  background: #000;
+  background: #00a8ff;
   color: #fff;
   font-size: 20px;
+}
+.mfk-heading {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+  text-align: justify;
+}
+mat-card {
+  margin-bottom: 20px;
+  background: #e0ebf5;
 }
 .example-headers-align .mat-expansion-panel-header-title,
 .example-headers-align .mat-expansion-panel-header-description {

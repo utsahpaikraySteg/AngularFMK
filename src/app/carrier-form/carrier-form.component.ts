@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { NgbModalConfig, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { MatSnackBar } from '@angular/material';
 import { ConfirmsnackbarComponent } from '../confirmsnackbar/confirmsnackbar.component';
@@ -7,40 +7,34 @@ import { HttpClient } from '@angular/common/http';
 import { DataService } from '../data.service';
 import {  FileUploader} from 'ng2-file-upload/ng2-file-upload';
 
+
 //const uri = 'https://www.mfksoftware.com/uploads';
 const uri = 'https://mfksoftware.herokuapp.com/uploads';
 @Component({
-  selector: 'app-raectiveform',
-  templateUrl: './raectiveform.component.html',
-  styleUrls: ['./raectiveform.component.less'],
-  providers: [NgbModalConfig, NgbModal]
+  selector: 'app-carrier-form',
+  templateUrl: './carrier-form.component.html',
+  styleUrls: ['./carrier-form.component.less']
 })
-export class RaectiveformComponent implements OnInit {
+export class CarrierFormComponent implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
-  model: any = {};
   filepath: any;
   uploader:FileUploader = new FileUploader({url:uri});
   attachmentList:any = [];
   constructor(private formBuilder: FormBuilder, private modalService: NgbModal, public modal: NgbActiveModal, private snackBar: MatSnackBar, private http: HttpClient, private data: DataService) {
-      //   this.uploader.onCompleteItem = (item:any, response:any , status:any, headers:any) => {
-      //     this.attachmentList.push(JSON.parse(response));
-      //     console.log(this.attachmentList);
-      // }
+        this.uploader.onCompleteItem = (item:any, response:any , status:any, headers:any) => {
+          this.attachmentList.push(JSON.parse(response));
+      }
   }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      instituteName: ['', Validators.required],
-      studentStength: ['', Validators.required],
       ContactNumber: ['', Validators.required],
-      address: ['', Validators.required],
-      PreffredContactTime: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      query: ['', '']
-      // password: ['', [Validators.required, Validators.minLength(6)]]
+      uploadfile: ['', ''],
+      position:['','']
     });
   }
  
@@ -52,19 +46,15 @@ export class RaectiveformComponent implements OnInit {
     let user = {
       name: this.registerForm.value.firstName,
       email: this.registerForm.value.email,
-      instituteName: this.registerForm.value.instituteName,
-      studentStength: this.registerForm.value.studentStength,
       ContactNumber: this.registerForm.value.ContactNumber,
-      address: this.registerForm.value.address,
-      PreffredContactTime: this.registerForm.value.PreffredContactTime,
-      query: this.registerForm.value.query
-     // uploadfile: this.attachmentList[0].uploadname|| null
+      position:this.registerForm.value.position,
+      uploadfile: this.attachmentList[0].uploadname|| null
     }
     this.submitted = true;
 
 
     if (this.registerForm.valid) {
-      this.data.sendMail("https://mfksoftware.herokuapp.com/sendmail", user).subscribe(
+      this.data.sendMailwithattachment("https://mfksoftware.herokuapp.com/sendMailwithattachment", user).subscribe(
         data => {
           this.snackBar.openFromComponent(ConfirmsnackbarComponent, {
             duration: 1000,
@@ -73,7 +63,7 @@ export class RaectiveformComponent implements OnInit {
           for(let name in this.registerForm.controls) {
             this.registerForm.controls[name].setErrors(null);
           }
-         // this.uploader.queue=[];
+          this.uploader.queue=[];
         },
         err => {
           console.log(err);

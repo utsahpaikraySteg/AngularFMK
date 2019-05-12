@@ -1,0 +1,66 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Position Applied For</mat-label>
+            <input matInput type="text" formControlName="position" class="form-control" placeholder="Position Applied For">
+            <mat-icon matSuffix>career</mat-icon>
+          </mat-form-field>
+        </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Full Name</mat-label>
+        <input matInput type="text" formControlName="firstName" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" placeholder="First Name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" formControlName="email" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email">
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Contact Number</mat-label>
+        <input matInput type="tel" formControlName="ContactNumber" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.ContactNumber.errors }" placeholder="Contact Number">
+        <mat-icon matSuffix>contacts</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="fileSelector">
+            <input type="file" formControlName="uploadfile" name="fileUplaod" id="fileUpload" multiple ng2FileSelect
+              [uploader]="uploader">
+          </div>
+          <div>
+            <div class="row uploadList" *ngFor="let item of uploader.queue">
+              <div class="col-sm-4">{{item.file.name}}</div>
+              <div class="col-sm-4">
+                <div class="progress">
+                  <div class="progress-bar bg-success" [ngStyle]="{'width':item.progress+'%'}"></div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <button type="button" class="btn btn-dark  mx-1" (click)="item.upload()">Upload</button>
+                <button type="button" class="btn btn-danger  mx-1" (click)="item.remove()">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group button-group">
+      <button class="btn btn-primary">submit</button>
+    </div>
+
+  </form>
+
+</div>
